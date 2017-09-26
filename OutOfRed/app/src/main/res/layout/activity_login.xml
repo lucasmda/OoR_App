@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="outofred.com.br.outofred.LoginActivity"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Out of Red"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:layout_margin="30dp"
+        />
+
+    <EditText
+        android:id="@+id/login_cpf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Insira seu CPF"
+        android:layout_margin="10dp"
+        />
+
+    <EditText
+        android:id="@+id/login_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Insira sua senha"
+        android:layout_margin="10dp"
+        />
+    <Button
+        android:id="@+id/login_button_entrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        android:layout_margin="20dp"
+        />
+
+
+
+</LinearLayout>
