@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="outofred.com.br.outofred.LoginActivity"
     android:orientation="vertical"
+    android:background="@drawable/gradiente_background"
     >
     <TextView
         android:layout_width="match_parent"
@@ -37,6 +38,8 @@
         android:layout_height="wrap_content"
         android:text="Entrar"
         android:layout_margin="20dp"
+        android:background="@color/darkGreen"
+        android:textColor="@color/white"
         />
 
 
