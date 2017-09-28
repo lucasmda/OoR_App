@@ -1,47 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="outofred.com.br.outofred.LoginActivity"
-    android:orientation="vertical"
-    android:background="@drawable/gradiente_background"
     >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/gradiente_background"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Out of Red"
+        android:text="Deal"
         android:textSize="40dp"
         android:gravity="center"
-        android:layout_margin="30dp"
+        android:layout_margin="40dp"
+        android:textColor="@color/white"
         />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/login_cpf"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:hint="Insira seu CPF"
+        android:paddingLeft="20dp"
         android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/edit_text_layout"
         />
 
     <EditText
         android:id="@+id/login_senha"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:hint="Insira sua senha"
+        android:paddingLeft="20dp"
         android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/edit_text_layout"
         />
+
     <Button
         android:id="@+id/login_button_entrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Entrar"
-        android:layout_margin="20dp"
-        android:background="@color/darkGreen"
-        android:textColor="@color/white"
+        android:layout_margin="40dp"
+        android:background="@drawable/button_red"
+        android:textColor="@color/darkerRed"
+        android:textStyle="bold"
         />
+    </LinearLayout>
 
 
-
-</LinearLayout>
+</RelativeLayout>
