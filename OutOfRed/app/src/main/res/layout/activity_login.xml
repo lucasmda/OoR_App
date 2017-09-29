@@ -26,18 +26,10 @@
             android:layout_margin="40dp"
             >
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="160dp"
+                android:layout_height="120dp"
                 android:layout_gravity="center"
-                android:src="@drawable/deal_icon_white"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Deal!"
-                android:textSize="50dp"
-                android:gravity="center"
-                android:textColor="@color/white"
+                android:src="@drawable/logo_deal520"
                 />
         </LinearLayout>
 
@@ -45,12 +37,12 @@
         android:id="@+id/login_cpf"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:hint="Insira seu CPF"
         android:paddingLeft="20dp"
         android:layout_margin="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:background="@drawable/edit_text_layout"
+        android:hint="Insira seu CPF"
         />
 
     <EditText

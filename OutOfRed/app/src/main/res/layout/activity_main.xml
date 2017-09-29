@@ -8,16 +8,20 @@
     android:orientation="vertical"
     android:background="@drawable/gradiente_background"
     >
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Deal!"
-        android:textSize="40dp"
-        android:gravity="center"
-        android:layout_margin="30dp"
-        android:textColor="@color/white"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        >
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo_deal520"
         />
+       </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -64,30 +68,87 @@
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Data de vencimento da dívida"
-        android:layout_margin="20dp"
+        android:layout_height="40dp"
+        android:paddingLeft="20dp"
+        android:layout_margin="10dp"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/edit_text_layout"
+        android:hint="Data de vencimento da dívida"
         />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Valor da dívida"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_height="40dp"
+        android:paddingLeft="20dp"
+        android:layout_margin="10dp"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/edit_text_layout"
+        android:hint="Valor da dívida"
         />
 
-    <Button
-        android:id="@+id/login_button_entrar"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/spinner_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/edit_text_layout"
+            />
+
+        <Spinner
+            android:id="@+id/spinner_parcelas"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/spinner_view"
+            android:backgroundTint="@color/white"
+            android:layout_marginLeft="20dp"
+            >
+        </Spinner>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="20dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/edit_text_layout"
+        android:hint="Valor do desconto"
+        android:textColorHint="@color/white"
+        />
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Simular"
         android:layout_margin="20dp"
-        android:background="@drawable/button_red"
-        android:textColor="@color/darkerRed"
+        >
+
+    <Button
+        android:id="@+id/main_button_simular"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Simular"
+        android:background="@drawable/button_transp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         />
+
+        <Button
+            android:id="@+id/main_button_pagar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Pagar"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_red"
+            android:textColor="@color/darkerRed"
+            android:textStyle="bold"
+            />
+
+    </RelativeLayout>
 
 </LinearLayout>
