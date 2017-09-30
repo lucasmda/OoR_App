@@ -105,7 +105,7 @@
             android:layout_height="40dp"
             android:layout_alignBottom="@+id/spinner_view"
             android:backgroundTint="@color/white"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="30dp"
             >
         </Spinner>
     </RelativeLayout>
