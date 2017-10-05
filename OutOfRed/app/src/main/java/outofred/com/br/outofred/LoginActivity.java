@@ -22,4 +22,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+    //criar metodos para integracao com json
 }
