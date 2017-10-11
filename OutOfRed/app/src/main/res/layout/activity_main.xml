@@ -66,18 +66,22 @@
 
     </RelativeLayout>
 
-    <EditText
+    <TextView
+        android:id="@+id/main_data_vencimento"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:paddingLeft="20dp"
         android:layout_margin="10dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textSize="18dp"
+        android:gravity="center_vertical"
         android:background="@drawable/edit_text_layout"
         android:hint="@string/data_vencimento"
+        android:textColorHint="@color/white"
         />
 
     <TextView
+        android:id="@+id/main_valor_divida"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:paddingLeft="20dp"
@@ -113,6 +117,7 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/main_total_pagar"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:paddingLeft="20dp"
