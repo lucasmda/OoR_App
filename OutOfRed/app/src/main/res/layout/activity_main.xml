@@ -77,15 +77,17 @@
         android:hint="@string/data_vencimento"
         />
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:paddingLeft="20dp"
         android:layout_margin="10dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textSize="18dp"
+        android:gravity="center_vertical"
         android:background="@drawable/edit_text_layout"
         android:hint="@string/valor_divida"
+        android:textColorHint="@color/white"
         />
 
     <RelativeLayout

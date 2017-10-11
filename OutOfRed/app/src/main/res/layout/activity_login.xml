@@ -66,6 +66,7 @@
         android:background="@drawable/button_red"
         android:textColor="@color/darkerRed"
         android:textStyle="bold"
+        android:onClick="buscar"
         />
     </LinearLayout>
 
