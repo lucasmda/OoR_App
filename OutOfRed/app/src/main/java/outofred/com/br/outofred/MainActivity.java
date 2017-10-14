@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
     private double valorAtual;
     private double valorAPagar;
 
+    Bundle bundle = getIntent().getExtras();
+    int idCliente = bundle.getInt("idCliente");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,13 +55,13 @@ public class MainActivity extends AppCompatActivity {
         simular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calcularDesconto(valorAtual, String.valueOf(spinner.getSelectedItem()));
+                calcularDesconto(valorAtual, spinner.getSelectedItem().toString());
                 totalPagar.setText(String.valueOf(valorAPagar));
             }
         });
 
     }
-    
+
 
     public void calcularDesconto(double valor, String parcela){
         double valorFinal = 0;
