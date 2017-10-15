@@ -45,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
         valorDivida = (TextView) findViewById(R.id.main_valor_divida);
         totalPagar = (TextView) findViewById(R.id.main_total_pagar);
 
+        BuscaTask task = new BuscaTask();
+        task.execute(String.valueOf(idCliente));
+
         final Spinner spinner = (Spinner) findViewById(R.id.spinner_parcelas);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.parcelas_array, R.layout.spinner_item);
@@ -106,15 +109,22 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     //Recuperar os valores do JSON
                     JSONObject json = new JSONObject(s);
+                    int id = json.getInt("Id");
+                    String nome = json.getString("nome");
+                    String senha = json.getString("senha");
+                    String cep = json.getString("cep");
+                    String telefone = json.getString("telefone");
                     String cpf = json.getString("cpf");
-                    String nasci = json.getString("dataNascimento");
+                    String dataNasc = json.getString("dataNascimento");
+                    String email = json.getString("email");
+                    double saldo = json.getDouble("saldo");
 
                     String venci = json.getString("dataVencimento");
                     double divida = json.getDouble("valor");
 
                     //Atualizar a tela
                     campoCpf.setText(cpf);
-                    dataNascimento.setText(nasci);
+                    dataNascimento.setText(dataNasc);
 
                     dataVencimento.setText(venci);
                     valorDivida.setText(String.valueOf(divida));
