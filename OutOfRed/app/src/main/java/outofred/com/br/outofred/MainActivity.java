@@ -12,6 +12,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -19,6 +20,11 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
+import outofred.com.br.outofred.model.Cliente;
+import outofred.com.br.outofred.model.Divida;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -119,17 +125,32 @@ public class MainActivity extends AppCompatActivity {
                     String email = json.getString("email");
                     double saldo = json.getDouble("saldo");
 
-                    String venci = json.getString("dataVencimento");
-                    double divida = json.getDouble("valor");
+                    JSONArray jsonArray = json.getJSONArray("dividas");
+                    List<Divida> lista = new ArrayList<>();
+
+                    for (int i=0; i < jsonArray.length(); i++) {
+                        JSONObject item = (JSONObject) jsonArray.get(i);
+                        int idDivida = item.getInt("idDivida");
+                        double valor = item.getDouble("valor");
+                        String venci = item.getString("dataVencimento");
+                        int idCliente = item.getInt("idClinte");
+                        Divida dividaModel = new Divida(idDivida,valor,venci,idCliente);
+                        lista.add(dividaModel);
+                    }
+
+                    for (int i=0; i < jsonArray.length(); i++){
+                        if (idCliente == lista.get(i).getIdCliente()){
+                            dataVencimento.setText(lista.get(i).getDataVencimento());
+                            valorDivida.setText(String.valueOf(lista.get(i).getValor()));
+
+                            valorAtual = lista.get(i).getValor();
+                        }
+                    }
 
                     //Atualizar a tela
                     campoCpf.setText(cpf);
                     dataNascimento.setText(dataNasc);
 
-                    dataVencimento.setText(venci);
-                    valorDivida.setText(String.valueOf(divida));
-
-                    valorAtual = divida;
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -180,13 +201,3 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 
-/*
-        Button pagar = (Button) findViewById(R.id.main_button_pagar);
-        pagar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SuccessActivity.class);
-                MainActivity.this.startActivity(intent);
-            }
-        });
-        */

@@ -15,12 +15,11 @@ public class Divida {
     public Divida() {
     }
 
-    public Divida(int idDivida, double valor, String dataVencimento, int idCliente, Cliente cliente) {
+    public Divida(int idDivida, double valor, String dataVencimento, int idCliente) {
         this.idDivida = idDivida;
         this.valor = valor;
         this.dataVencimento = dataVencimento;
         this.idCliente = idCliente;
-        this.cliente = cliente;
     }
 
     public int getIdDivida() {
