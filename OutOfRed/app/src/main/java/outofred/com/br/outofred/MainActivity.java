@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 //Criar a URL
-                URL url = new URL("http://10.20.63.61:8080/MercadoFiap/rest/mercado/" + params[0]);
+                URL url = new URL("http://127.0.0.1:8080/api/Cliente/" + params[0]);
                 //Obter uma conexão
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 

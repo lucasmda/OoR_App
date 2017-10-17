@@ -95,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
         protected String doInBackground(Void... params) {
             try {
                 URL url = new URL(
-                        "http://10.20.63.61:8080/MercadoFiap/rest/mercado/");
+                        "http://127.0.0.1:8080/api/Cliente");
                 HttpURLConnection connection =
                         (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
