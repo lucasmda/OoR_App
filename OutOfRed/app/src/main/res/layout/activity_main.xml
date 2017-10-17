@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="outofred.com.br.outofred.LoginActivity"
+    android:orientation="vertical"
+    android:background="@drawable/gradiente_background"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        >
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo_deal520"
+        />
+       </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/main_cpf_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CPF: "
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/main_cpf_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="765.345.357-74"
+            android:layout_toRightOf="@+id/main_cpf_text"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/main_bday_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/birth"
+            android:layout_toRightOf="@+id/main_cpf_number"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/main_bday_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="03/06/1987"
+            android:layout_toRightOf="@+id/main_bday_text"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/main_data_vencimento"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="20dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/edit_text_layout"
+        android:hint="@string/data_vencimento"
+        android:textColorHint="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/main_valor_divida"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="20dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/edit_text_layout"
+        android:hint="@string/valor_divida"
+        android:textColorHint="@color/white"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/spinner_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/edit_text_layout"
+            />
+
+        <Spinner
+            android:id="@+id/spinner_parcelas"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/spinner_view"
+            android:backgroundTint="@color/white"
+            android:layout_marginLeft="30dp"
+            >
+        </Spinner>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/main_total_pagar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="20dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/edit_text_layout"
+        android:hint="@string/amount_to_pay"
+        android:textColorHint="@color/white"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        >
+
+    <Button
+        android:id="@+id/main_button_simular"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/simular"
+        android:background="@drawable/button_transp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+
+        <Button
+            android:id="@+id/main_button_pagar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pay"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_red"
+            android:textColor="@color/darkerRed"
+            android:textStyle="bold"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">OutOfRed</string>
+    <string name="app_name">Deal!</string>
+    <string name="amount_to_pay">Total a pagar</string>
+    <string name="birth">Nascimento:</string>
+    <string name="data_vencimento">Data de vencimento da dívida</string>
+    <string name="valor_divida">Valor da dívida</string>
+    <string name="simular">Simular</string>
+    <string name="pay">Pagar</string>
+
+    <string-array name="parcelas_array">
+        <item>Pagar a vista</item>
+        <item>Pagar em 2x</item>
+        <item>Pagar em 3x</item>
+        <item>Pagar em 4x</item>
+        <item>Pagar em 5x</item>
+    </string-array>
+
 </resources>
